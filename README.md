@@ -1,7 +1,10 @@
 ### MultimodalPPI ###
-MultimodalPPI employ document embedding and graph embedding to characterize the multimodal features (i.e., sequence, network and function) of proteins to train the LightGBM modal for the prediction of protein-protein interactions (PPIs) between herpes viruses and human host.
+MultimodalPPI employ document and graph embeddings to characterize the multimodal features (i.e., sequence, network and function) of proteins to train the LightGBM models for the prediction of protein-protein interactions (PPIs) between herpes viruses and human host.
 
 ### Usage ###
+# Step 0 Prepare embedding model files
+  cat ./x* > embeddings.tar.gz 
+  tar -zxvf embeddings.tar.gz
 
 # Step 1 Select encoding approach (doc2vec, net, go, dpc, ct, ac) to represent proteins of samples
   cd script
@@ -42,7 +45,7 @@ The human-virus systems and related parameters can be changed in the above pytho
   Two benchmarking datasets of human-herpesvirus PPI system. The ratio of positive-to-negative is 1:10. Three replicates were set for each bencmarking dataset.
   'non-rigorous dataset', sample/1_10_c1_1/; sample/1_10_c1_2/; sample/1_10_c1_3/
   'rigorous dataset', sample/1_10_c3_1/; sample/1_10_c3_2/; sample/1_10_c3_3/
-  9439 human-herpesvirus PPIs, 94390 non-human-Herpes PPIs.
+  9,439 human-herpesvirus PPIs, 94,390 non-human-Herpes PPIs.
   
 ### Requirements ###
   - Keras (==2.2.4)
@@ -53,7 +56,7 @@ The human-virus systems and related parameters can be changed in the above pytho
 Please kindly cite the paper if you use refers to the paper, code or datasets.
 @article{Yang2023MultimodalPPI,
   title={Multi-modal features-based human-herpesvirus protein-protein interaction prediction by using LightGBM},
-  author={Yang, Xiaodi and Wuchty, Stefan and Liiang, Zeyin and Ji, Li and Wwang, Bingjie and Zhu, Jialin and Zhang, Ziding and Dong, Yujun},
+  author={Yang, Xiaodi and Wuchty, Stefan and Liang, Zeyin and Ji, Li and Wang, Bingjie and Zhu, Jialin and Zhang, Ziding and Dong, Yujun},
   journal={xx}
 }
 
