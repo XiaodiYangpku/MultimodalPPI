@@ -18,7 +18,7 @@ MultimodalPPI employ document and graph embeddings to characterize the multimoda
   python 2_combine_multimodal.py encoding_method1 encoding_method2 encoding_method3 ...
   e.g. python 2_combine_multimodal.py doc2vec net go
 
-# Step 3 Select machine learning algorithm (lgbm, rf, svm): train and test the model based on pre-trained embeddings by using selected algorithm.
+# Step 3 Select machine learning algorithm (lgbm, rf, svm, mlp): train and test the model based on pre-trained embeddings by using selected algorithm.
   cd script
   python 3_train_test.py encoding_method dataset algorithm
   e.g. 'rigorous dataset' (three replicates), c3_1/c3_2/c3_3
